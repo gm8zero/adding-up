@@ -40,7 +40,7 @@ rl.on('line', lineString => {
 });
 rl.on('close', () => {
     for (let [key, date] of prefectureDataMap) { //また復習　なんでvalueじゃなくても動くのか
-        date.change = date.popu15 / date.popu10;//ここvalueじゃなくても動くのが分からない >> forofでキーでプレふぇくちゃーに入れてるから？？
+        date.change = date.popu15 / date.popu10;//ここvalueじゃなくても動くのが分からない >> forofでキーでプレふぇくちゃーに入れてるから？
     }
     const rankingArray = Array.from(prefectureDataMap).sort((pair1, pair2) => {
         return pair2[1].change - pair1[1].change;
